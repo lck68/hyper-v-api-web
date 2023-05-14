@@ -21,6 +21,7 @@ if is_admin():
     def modify():
         with open("index.txt", "a") as f:
             f.write('1311')
+            f.close
 
     # 定义生成随机时间的函数
     def suiji_time():
