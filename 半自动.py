@@ -23,20 +23,11 @@ if is_admin():
             f.write('1311')
             f.close
 
-    # 定义生成随机时间的函数
-    def suiji_time():
-        random_hour = random.randint(8, 21)  # 8点到21点
-        random_minute = random.randint(30, 59)  # 11分到59分
-        return random_hour, random_minute
-
     # 循环从起始日期到终止日期执行操作
     current_date = start_date
     while current_date <= end_date:
         os.system(f"date {current_date.strftime('%Y-%m-%d')}")  # 修改系统日期
-        # 设置系统时间为当前日期和随机时间
-        random_hour, random_minute = suiji_time()
-            
-        os.system(f"time {random_hour}:{random_minute}")  # 修改系统时间
+
             # 执行modify函数
         modify()
         input()
